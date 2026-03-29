@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Trio 💖</title>
+  //fonts 
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+  //font for a letter.
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="matrix"></canvas>
+
+  <!-- ✅ SCENE 1 — Glitchy Terminal -->
+  <div class="container" id="scene1">
+    <div class="box">
+      <div class="line" id="l1">⚡ Error detected…</div>
+      <div class="line" id="l2">⚠ Missing component…</div>
+      <div class="line" id="l3">⟳ Searching…</div>
+      <div class="line" id="l4">✦ Match found: My Trio  😪😔</div>
+      <button class="btn" id="continueBtn"
+      onclick="goToReady()">Continue →</button>
+    </div>
+  </div>
+
+  <!-- ✅ SCENE 2 — Are You Ready? -->
+  <div class="container" id="readyPage" style="display:none;">
+    <div class="box">
+      <div class="stars">✦ ✦ ✦</div>
+      <h1 class="question">Are you Ready to see the magic? ✨</h1>
+      <div class="buttons">
+        <button class="btn yes-btn" onclick="goToLetter()">Yes</button>
+        <button class="btn no-btn" id="noBtn" onclick="clickedNo()">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ SCENE 3 — Coming Soon -->
+  <div class="container" id="letterPage" style="display:none;">
+    <div class="soon-box">
+      <div class="soon-stars">✦ ✦ ✦</div>
+      <div class="soon-text">Coming Soon... 💖</div>
+      <div class="soon-sub">Warning: This might make your Heart overflow.🌸</div>
+      <button class="click-here-btn" id="clickHereBtn"
+      onclick="goToRealLetter()">Click Here ✨</button>
+    </div>
+  </div>
+
+<!-- ✅ REAL LETTER SCENE -->
+<div class="container" id="realLetterPage" style="display:none;">
+  <canvas id="goldCanvas"></canvas>
+  <div class="letter-container" id="letterContainer">
+    <div class="letter-header">
+      <span class="letter-label">A Message From The Heart</span>
+      <div class="letter-divider">✦ ──────────── ✦</div>
+    </div>
+    <div class="letter-body">
+      <div class="letter-line" id="rl0">Miss Fatima and  Miss Alishba </div>
+      <div class="letter-line" id="rl1">First of all  Thank you so much ... for being there as my Besties 🥺</div>
+      <div class="letter-line" id="rl2">I honestly dont even know where to start, because how do you put something so special into words? You both are not just my best friends… you are my safe place, my happiness, and my biggest comfort. 💖</div>
+      <div class="letter-line" id="rl3">Through every laugh, every random conversation, every little moment—we’ve created something so beautiful together. No matter what happens in life, I know I’ll always have you two, and that thought alone makes everything feel okay.<div class="letter-love">💖</div></div>
+      <div class="letter-line" id="rl4">Thank you for understanding me without explaining, for standing by me even in my worst moods, and for making my life so much brighter just by being in it. 💫</div>
+      <div class="letter-line" id="rl5">Our trio isn’t just friendship… it’s a whole feeling, a whole world of its own. And I wouldn’t trade it for anything.</div>
+      <div class="letter-line" id="rl6">I don’t know what I did to deserve you both, but I’m forever grateful that I have you in my life. No matter where life takes us, I know our bond will never fade. 🥺</div>
+      <div class="letter-line" id="rl7">💕</div>
+      <div class="letter-line" id="rl8"> 💖</div>
+      <div class="letter-line letter-love" id="rl9">Our trio isn’t just friendship… it’s a whole feeling, a whole world of its own. And I wouldn’t trade it for anything. 💫</div>
+      <div class="letter-line letter-regards" id="rl10"> I love you both more than words can ever explain 💖</div>
+      <div class="letter-line letter-regards" id="rl11">Regards, ❤️</div>
+      <div class="letter-line letter-regards" id="rl12">Your Bestie 🥺</div>
+    </div>
+    <div class="letter-footer" id="letterFooter" style="opacity:0;">
+      <div class="letter-divider">✦ ──────────── ✦</div>
+      <button class="replay-btn" onclick="replayAll()">↺ Replay from Start</button>
+    </div>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
